@@ -32,17 +32,16 @@ export default function Home() {
             </thead>
             <tbody>
                 {
-                    users.map((user, index) => (
+                    users.users?.map((user, index) => (
                         <tr>
-                            <th scope='row' key={index}>{index+1}</th>
-                            <td>{user.name}</td>
+                            <th scope='row'></th>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
                         </tr>
                     ))
-                   
-                }
+                };
             </tbody>
         </table>
     </div>
