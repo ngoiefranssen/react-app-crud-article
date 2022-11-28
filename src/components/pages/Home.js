@@ -20,33 +20,34 @@ export default function Home() {
     
   return (
     <div className='container'>
-        <div className='py-4'></div>
-        <table className="table border shadow py-5">
-            <thead>
-                <tr>
-                    <th scope='col'>#</th>
-                    <th scope='col'>Name</th>
-                    <th scope='col'>User name</th>
-                    <th scope='col'>Email</th>
-                    <th scope='col'>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                {
-                    users.users?.map((user, index) => (
-                        <tr>
-                            <th scope='row' key={index}>{index+1}</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
+        <div className='py-4'>
+            <table className="table border shadow py-5">
+                <thead>
+                    <tr>
+                        <th scope='col'>#</th>
+                        <th scope='col'>Name</th>
+                        <th scope='col'>User name</th>
+                        <th scope='col'>Email</th>
+                        <th scope='col'>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        users.users?.map((user, index) => (
+                            <tr>
+                                <th scope='row' key={index}>{index+1}</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
 
-                            </td>
-                        </tr>
-                    ))
-                }
-            </tbody>
-        </table>
+                                </td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
   )
 }
