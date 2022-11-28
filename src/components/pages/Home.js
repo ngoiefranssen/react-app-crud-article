@@ -13,7 +13,7 @@ export default function Home() {
         
         const resultApiData = await axios.get('http://192.168.10.53:8088/article');
 
-        // setArticle(resultApiData.data)
+        setArticle(resultApiData.data)
         // console.log(resultApiData.data)
     }
     
@@ -33,7 +33,7 @@ export default function Home() {
                 </thead>
                 <tbody>
                     {
-                        articles.users?.map((article, index) => (
+                        articles.map((article, index) => (
                             <tr>
                                 <th scope='row' key={index.idarticle}>{index+1}</th>
                                 <td>{article.nomarticle}</td>
