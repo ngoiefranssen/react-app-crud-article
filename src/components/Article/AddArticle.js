@@ -15,6 +15,7 @@ export default function AddArticle() {
                     placeholder="Message sent to description..."
                     name='description'></textarea>
           </div>
+          <button type='submit' className='btn btn-outline-primary'>submit</button>
         </div>
       </div>
     </div>
