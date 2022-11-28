@@ -1,6 +1,21 @@
-import React from 'react'
+import React,  {useState} from 'react';
 
 export default function AddArticle() {
+
+  const [article, setArticle] = useState({
+
+    nomarticle : "",
+    description : ""
+  });
+
+  const {nomarticle, description} =article;
+
+  const onInputChange = (e) =>{
+
+    e.preventDefault()
+
+    setArticle({ ...article, [e.target.nomarticle] : e.target.value});
+  }
   return (
     <div className='container'>
       <div className='row'>
