@@ -14,7 +14,7 @@ export default function Home() {
         const resultApiData = await axios.get('http://192.168.10.53:8088/article');
 
         // setArticle(resultApiData.data)
-        console.log(resultApiData.data)
+        // console.log(resultApiData.data)
     }
     
     
