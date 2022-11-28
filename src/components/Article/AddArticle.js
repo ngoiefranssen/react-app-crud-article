@@ -23,6 +23,7 @@ export default function AddArticle() {
 
   const onSubmit = async (e) =>{
 
+    e.preventDefault();
     await axios.post('http://192.168.10.53:8088/article', article);
     navigate("/");
   };

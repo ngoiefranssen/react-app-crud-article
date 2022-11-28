@@ -1,10 +1,12 @@
 import axios from 'axios';
-import React,  { useState} from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React,  { useEffect, useState} from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 export default function EditArticle() {
 
   let navigate = useNavigate();
+
+  const{idarticle} = useParams();
 
   const [article, setArticle] = useState({
 
@@ -15,17 +17,25 @@ export default function EditArticle() {
   const {nomarticle, description} = article;
 
   const onInputChange = (e) =>{
-
-    e.preventDefault()
-
-    setArticle({ ...article, [e.target.nomarticle] : e.target.value });
+    setArticle({ ...article, [e.target.name] : e.target.value });
   }
+
+  useEffect(() => {
+    loadingData();
+  }, [])
 
   const onSubmit = async (e) =>{
 
-    await axios.post('http://192.168.10.53:8088/article', article);
+    e.preventDefault();
+    await axios.put(`http://192.168.10.53:8088/article/${idarticle}`, article);
     navigate('/');
   };
+
+  const loadingData = async () =>{
+
+    const dataResult = await axios.get(`http://192.168.10.53:8088/article/${idarticle}`);
+    setArticle(dataResult.data)
+  }
 
   return (
     <div className='container'>
