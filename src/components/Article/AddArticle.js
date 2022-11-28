@@ -29,22 +29,21 @@ export default function AddArticle() {
   };
 
 
-
   return (
     <div className='container'>
       <div className='row'>
         <div className='col-md-6 offset-md-3 border rounded p-4 mt-2 shadow'>
           <h2 className='text-center m-4'>Register Article</h2>
           <form onSubmit={(e) => onSubmit(e)}>
-          <div  className='mt-3'>
-            <input  type="text" className="form-control"
+          <div  className='mb-3'>
+            <input  type={"text"} className="form-control"
                     placeholder='Enter your name...........' name='nomarticle'
                     value={nomarticle}
                     onChange={(e) => onInputChange(e)}
                     />
           </div>
           <div  className='mt-3'>
-          <textarea className="form-control"  type="text" rows="3"
+          <textarea className="form-control"  type={"text"} rows="3"
                     placeholder="Message sent to description..."
                     name='description'
                     value={description}
