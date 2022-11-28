@@ -16,7 +16,7 @@ export default function AddArticle() {
 
   const onInputChange = (e) =>{
 
-    e.preventDefault()
+    e.preventDefault();
 
     setArticle({ ...article, [e.target.nomarticle] : e.target.value });
   }
