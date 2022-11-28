@@ -42,7 +42,10 @@ export default function Home() {
                                 {/* <td>{}</td> */}
                                 <td>
                                     <button className='btn btn-primary mx-2'>View</button>
-                                    <Link className='btn btn-outline-success mx-2'>Edit</Link>
+                                    <Link className='btn btn-outline-success mx-2'
+                                          to={`/editarticle/`}>
+                                        Edit
+                                    </Link>
                                     <button className='btn btn-danger mx-2'>Delete</button>
                                 </td>
                             </tr>
