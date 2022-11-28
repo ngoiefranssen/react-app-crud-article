@@ -19,7 +19,7 @@ export default function AddArticle() {
     e.preventDefault();
 
     setArticle({ ...article, [e.target.nomarticle] : e.target.value });
-  }
+  };
 
   const onSubmit = async (e) =>{
 

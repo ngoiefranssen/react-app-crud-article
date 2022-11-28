@@ -1,8 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 export default function Home() {
+
+    const{idarticle} = useParams();
 
     const [articles, setArticle] = useState([]);
 
@@ -16,8 +18,13 @@ export default function Home() {
 
         setArticle(resultApiData.data)
         // console.log(resultApiData.data)
-    }
+    };
     
+    const deleteArticle = async (idarticle) =>{
+
+        await axios.delete(`http://192.168.10.53:8088/article/${idarticle}`);
+        api_calls();
+    };
     
   return (
     <div className='container'>
@@ -46,7 +53,10 @@ export default function Home() {
                                           to={`/editarticle/${article.idarticle}`}>
                                         Edit
                                     </Link>
-                                    <button className='btn btn-danger mx-2'>Delete</button>
+                                    <button className='btn btn-danger mx-2'
+                                            onClick={() => deleteArticle(article.idarticle)}>
+                                        Delete
+                                    </button>
                                 </td>
                             </tr>
                         ))
