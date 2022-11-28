@@ -11,7 +11,7 @@ export default function AddArticle() {
                     placeholder='Enter your name..........' name='name'/>
           </div>
           <div  className='mt-3'>
-          <textarea class="form-control"  type={"text"} rows="3"
+          <textarea className="form-control"  type={"text"} rows="3"
                     placeholder="Message sent to description..."
                     name='description'></textarea>
           </div>
