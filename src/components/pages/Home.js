@@ -36,11 +36,13 @@ export default function Home() {
                         users.users?.map((user, index) => (
                             <tr>
                                 <th scope='row' key={index}>{index+1}</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>{}</td>
+                                <td>{}</td>
+                                <td>{}</td>
                                 <td>
-
+                                    <button className='btn btn'></button>
+                                    <button className='btn btn'></button>
+                                    <button className='btn btn'></button>
                                 </td>
                             </tr>
                         ))
