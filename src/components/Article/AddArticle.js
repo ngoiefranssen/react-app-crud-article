@@ -16,8 +16,11 @@ export default function AddArticle() {
                     name='description'></textarea>
           </div>
           <div className='text-center'>
-            <button type='submit' className='btn btn-outline-primary my-3 btn-center'>
+            <button type='submit' className='btn btn-outline-primary my-3 mx-4'>
               Submit
+            </button>
+            <button type='submit' className='btn btn-outline-danger my-3'>
+              Cancel
             </button>
           </div>
         </div>
