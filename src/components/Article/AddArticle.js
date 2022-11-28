@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React,  { useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function AddArticle() {
 
@@ -51,9 +51,9 @@ export default function AddArticle() {
             <button type='submit' className='btn btn-outline-primary my-3 mx-4'>
               Submit
             </button>
-            <button type='submit' className='btn btn-outline-danger my-3'>
+            <Link to={'/'} className='btn btn-outline-danger my-3'>
               Cancel
-            </button>
+            </Link>
           </div>
         </div>
       </div>
