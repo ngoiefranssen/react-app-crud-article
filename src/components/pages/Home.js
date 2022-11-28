@@ -41,7 +41,7 @@ export default function Home() {
                             <td></td>
                         </tr>
                     ))
-                };
+                }
             </tbody>
         </table>
     </div>

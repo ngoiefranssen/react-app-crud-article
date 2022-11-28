@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function Navbar() {
   return (
@@ -12,9 +12,9 @@ export default function Navbar() {
                   aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <button className='btu btn-outline'></button>
+          <button className='btu btn-outline-light'>Add user</button>
         </div>
       </nav>
     </div>
-  );
+  )
 }
