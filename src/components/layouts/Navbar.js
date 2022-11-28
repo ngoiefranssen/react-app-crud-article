@@ -13,7 +13,7 @@ export default function Navbar() {
                   aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <Link className='btn btn-outline-light' to='/adduser'>Add user</Link>
+          <Link className='btn btn-outline-light' to='/add_article'>Add article</Link>
         </div>
       </nav>
     </div>
