@@ -8,7 +8,7 @@ export default function AddArticle() {
           <h2 className='text-center m-4'>Register Article</h2>
           <div  className='mt-3'>
             <input  type={"text"} className="form-control"
-                    placeholder='Enter your name..........' name='name'/>
+                    placeholder='Enter your name...........' name='name'/>
           </div>
           <div  className='mt-3'>
           <textarea className="form-control"  type={"text"} rows="3"
