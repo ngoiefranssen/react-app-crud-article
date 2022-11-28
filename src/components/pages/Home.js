@@ -20,7 +20,7 @@ export default function Home() {
     
   return (
     <div className='container'>
-        <table className="table table-striped border shadow py-4">
+        <table className="table border shadow py-5">
             <thead>
                 <tr>
                     <th scope='col'>#</th>
@@ -34,11 +34,13 @@ export default function Home() {
                 {
                     users.users?.map((user, index) => (
                         <tr>
-                            <th scope='row'></th>
+                            <th scope='row' key={index}>{index+1}</th>
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td></td>
+                            <td>
+                                
+                            </td>
                         </tr>
                     ))
                 }
