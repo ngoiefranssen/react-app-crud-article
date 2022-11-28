@@ -20,6 +20,7 @@ export default function Home() {
     
   return (
     <div className='container'>
+        <div className='py-4'></div>
         <table className="table border shadow py-5">
             <thead>
                 <tr>
@@ -39,7 +40,7 @@ export default function Home() {
                             <td></td>
                             <td></td>
                             <td>
-                                
+
                             </td>
                         </tr>
                     ))
