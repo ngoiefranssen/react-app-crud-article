@@ -41,7 +41,7 @@ export default function ViewArticle() {
               </ul> 
              </div>
           </div>
-          <Link className='btn btn-primary' to={'/'}>Back to home</Link>
+          <Link className='btn btn-primary my-3' to={'/'}>Back to home</Link>
         </div>
       </div>
     </div>
