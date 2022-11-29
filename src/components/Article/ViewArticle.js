@@ -1,23 +1,26 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 export default function ViewArticle() {
 
   const [articleView, setArticleView] = useState({
 
-    nomarticle,
-    description,
+    nomarticle : "",
+    description : "",
   });
+
+  const {idarticle} = useParams();
 
   useEffect(() => {
     loadDataView();
-  })
+  },[]);
 
   const loadDataView = async () =>{
-    const resultViewData = await axios.get(`http://192.168.10.53:8088/article`);
+    const resultViewData = await axios.get(`http://192.168.10.53:8088/article/${idarticle}`);
     setArticleView(resultViewData.data);
-  }
+  };
+
   return (
     <div className='container'>
       <div className='row'>
@@ -27,11 +30,13 @@ export default function ViewArticle() {
              <div className='card-header'>
               Details for Article id :
               <ul className='list-group list-groupe-flush'>
-              <li className='list-group-item'>
+                <li className='list-group-item'>
                   <b>Nom Article : </b>
+                  {articleView.nomarticle}
                 </li>
                 <li className='list-group-item'>
                   <b>Description Article : </b>
+                  {articleView.description}
                 </li>
               </ul> 
              </div>
