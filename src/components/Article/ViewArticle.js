@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 export default function ViewArticle() {
 
   const [articleView, setArticleView] = useState({
+
     
-  })
+  }, [])
   return (
     <div className='container'>
       <div className='row'>
