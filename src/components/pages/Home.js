@@ -48,7 +48,8 @@ export default function Home() {
                                 <td>{article.description}</td>
                                 {/* <td>{}</td> */}
                                 <td>
-                                    <button className='btn btn-primary mx-2'>View</button>
+                                    <Link className='btn btn-primary mx-2' 
+                                          to={`/viewarticle/${article.idarticles}`}>View</Link>
                                     <Link className='btn btn-outline-success mx-2'
                                           to={`/editarticle/${article.idarticle}`}>
                                         Edit
