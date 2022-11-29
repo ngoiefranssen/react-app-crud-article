@@ -9,7 +9,14 @@ export default function ViewArticle() {
           <div className='card'>
              <div className='card-header'>
               Details for Article id :
-              <ul className=''></ul> 
+              <ul className='list-group list-groupe-flush'>
+              <li className='list-group-item'>
+                  <b>Nom Article : </b>
+                </li>
+                <li className='list-group-item'>
+                  <b>Description Article : </b>
+                </li>
+              </ul> 
              </div>
           </div>
         </div>
