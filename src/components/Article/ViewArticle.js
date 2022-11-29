@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function ViewArticle() {
   return (
@@ -19,6 +20,8 @@ export default function ViewArticle() {
               </ul> 
              </div>
           </div>
+          <Link className='btn btn-primary '>Back to home</Link>
+
         </div>
       </div>
     </div>
