@@ -28,7 +28,7 @@ export default function ViewArticle() {
           <h2 className='text-center m-4'>Article Details</h2>
           <div className='card'>
              <div className='card-header'>
-              Details for Article id :
+              Details for Article id : {articleView.idarticle}
               <ul className='list-group list-groupe-flush'>
                 <li className='list-group-item'>
                   <b>Nom Article : </b>
