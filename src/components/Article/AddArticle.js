@@ -9,7 +9,7 @@ export default function AddArticle() {
   const [article, setArticle] = useState({
 
     nomarticle : "",
-    description : ""
+    description : "",
   });
 
   const {nomarticle, description} = article;
@@ -18,7 +18,7 @@ export default function AddArticle() {
 
     e.preventDefault();
 
-    setArticle({ ...article, [e.target.nomarticle] : e.target.value });
+    setArticle({ ...article, [e.target.name] : e.target.value });
   };
 
   const onSubmit = async (e) =>{
