@@ -6,17 +6,17 @@ export default function ViewArticle() {
 
   const [articleView, setArticleView] = useState({
 
-    nomarticle : "",
-    description : "",
+    nomarticle: "",
+    description: "",
   });
 
-  const {idarticle} = useParams();
+  const { idarticle } = useParams();
 
   useEffect(() => {
     loadDataView();
-  },[]);
+  }, []);
 
-  const loadDataView = async () =>{
+  const loadDataView = async () => {
     const resultViewData = await axios.get(`http://192.168.10.53:8088/article/${idarticle}`);
     setArticleView(resultViewData.data);
   };
@@ -27,7 +27,7 @@ export default function ViewArticle() {
         <div className='col-md-6 offset-md-3 border rounded p-4 mt-2 shadow'>
           <h2 className='text-center m-4'>Article Details</h2>
           <div className='card'>
-             <div className='card-header'>
+            <div className='card-header'>
               Details for Article id : {articleView.idarticle}
               <ul className='list-group list-groupe-flush'>
                 <li className='list-group-item'>
@@ -38,8 +38,8 @@ export default function ViewArticle() {
                   <b>Description Article : </b>
                   {articleView.description}
                 </li>
-              </ul> 
-             </div>
+              </ul>
+            </div>
           </div>
           <Link className='btn btn-primary my-3' to={'/'}>Back to home</Link>
         </div>
